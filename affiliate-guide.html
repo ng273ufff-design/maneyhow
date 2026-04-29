@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アフィリエイト登録ガイド | マネーハウ 運営メモ</title>
+<style>
+  :root{--bg:#0a0f1e;--bg2:#0d1b2a;--accent:#00d4aa;--text:#f0f4f8;--muted:rgba(240,244,248,0.55);--border:rgba(255,255,255,0.08);}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;line-height:1.8;padding:40px 24px 80px;}
+  .wrap{max-width:800px;margin:0 auto;}
+  h1{font-size:28px;font-weight:900;margin-bottom:8px;}
+  .note{font-size:13px;color:var(--muted);margin-bottom:48px;}
+  h2{font-size:18px;font-weight:900;margin:40px 0 16px;padding-left:14px;border-left:4px solid var(--accent);}
+  h3{font-size:15px;font-weight:800;color:var(--accent);margin:24px 0 8px;}
+  p{font-size:14px;color:rgba(240,244,248,0.85);margin-bottom:12px;}
+  .step-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;margin:16px 0;}
+  .step-num{font-size:11px;font-weight:800;color:var(--accent);letter-spacing:1px;margin-bottom:8px;}
+  table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+  th{background:rgba(0,212,170,0.15);color:var(--accent);padding:10px 14px;text-align:left;font-weight:700;border-bottom:1px solid rgba(0,212,170,0.3);}
+  td{padding:10px 14px;border-bottom:1px solid var(--border);color:rgba(240,244,248,0.85);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  .code{background:rgba(0,212,170,0.1);border:1px solid rgba(0,212,170,0.2);border-radius:6px;padding:12px 16px;font-family:monospace;font-size:13px;color:var(--accent);margin:12px 0;word-break:break-all;}
+  .tag{font-size:11px;font-weight:700;padding:2px 8px;border-radius:8px;background:rgba(0,212,170,0.15);color:var(--accent);display:inline-block;}
+  a{color:var(--accent);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>アフィリエイト登録ガイド</h1>
+  <p class="note">このページは運営者向けメモです。A8.net・もしばらに登録後、取得したトラッキングURLを各記事の該当箇所と差し替えてください。</p>
+
+  <h2>STEP 1: アフィリエイトネットワーク登録</h2>
+  <div class="step-card">
+    <div class="step-num">A8.NET（メイン）</div>
+    <p>日本最大のASP。freee・楽天・SBI証券・弥生・楽天ふるさと納税など主要広告主が揃っています。</p>
+    <p><strong>登録URL：</strong><a href="https://www.a8.net/" target="_blank">https://www.a8.net/</a></p>
+    <p>登録は無料。審査なし（サイト審査は各広告主ごと）。</p>
+  </div>
+  <div class="step-card">
+    <div class="step-num">もしもアフィリエイト（サブ）</div>
+    <p>Amazon・楽天・Yahooの物販アフィリエイトに強い。旅行グッズ・書籍紹介に活用。</p>
+    <p><strong>登録URL：</strong><a href="https://af.moshimo.com/" target="_blank">https://af.moshimo.com/</a></p>
+  </div>
+
+  <h2>STEP 2: 各広告主に提携申請</h2>
+  <p>A8.net登録後、以下の広告主に提携申請してください。承認されると固有のトラッキングURLが発行されます。</p>
+
+  <table>
+    <tr><th>広告主</th><th>A8での検索キーワード</th><th>報酬目安</th><th>使用記事</th></tr>
+    <tr><td><strong>freee会計</strong></td><td>freee</td><td>無料登録：1,000〜2,000円<br>有料契約：5,000〜10,000円</td><td>invoice, aoyiro</td></tr>
+    <tr><td><strong>マネーフォワード クラウド</strong></td><td>マネーフォワード</td><td>無料登録：500〜1,500円</td><td>invoice, index</td></tr>
+    <tr><td><strong>弥生会計オンライン</strong></td><td>弥生</td><td>無料お試し：2,000円〜</td><td>aoyiro</td></tr>
+    <tr><td><strong>SBI証券</strong></td><td>SBI証券</td><td>口座開設：2,000〜5,000円</td><td>nisa</td></tr>
+    <tr><td><strong>楽天証券</strong></td><td>楽天証券</td><td>口座開設：2,000〜3,000円</td><td>nisa</td></tr>
+    <tr><td><strong>楽天ふるさと納税</strong></td><td>楽天ふるさと納税</td><td>成約：1〜3%</td><td>furusato</td></tr>
+    <tr><td><strong>さとふる</strong></td><td>さとふる</td><td>成約：1〜2%</td><td>furusato</td></tr>
+    <tr><td><strong>モゲチェック</strong></td><td>モゲチェック</td><td>診断完了：3,000〜10,000円</td><td>kinri</td></tr>
+    <tr><td><strong>社労士ドットコム系</strong></td><td>士業紹介</td><td>成約：5,000〜30,000円</td><td>106man, roudou</td></tr>
+    <tr><td><strong>ジョブカン勤怠</strong></td><td>ジョブカン</td><td>無料登録：1,000円〜</td><td>roudou</td></tr>
+  </table>
+
+  <h2>STEP 3: URLの差し替え方法</h2>
+  <p>提携承認後、A8.netのマイページ → 広告一覧 → 該当広告 → 「広告コードを取得」からURLを取得します。</p>
+  <p>現在の記事には以下のようなプレースホルダーURLが入っています：</p>
+  <div class="code">https://px.a8.net/svt/ejp?a8mat=<strong>A_FREEE</strong></div>
+  <p>この <code>A_FREEE</code> の部分をA8.netで発行された実際のトラッキングコードに差し替えてください。</p>
+
+  <h3>差し替え対象ファイル一覧</h3>
+  <table>
+    <tr><th>ファイル</th><th>差し替えプレースホルダー</th></tr>
+    <tr><td>index.html</td><td>A_ZEIRI4, A_FREEE, A_MFW</td></tr>
+    <tr><td>articles/106man.html</td><td>A_SHAROUSHI, A_ZEIRI4</td></tr>
+    <tr><td>articles/kinri.html</td><td>A_MOGECHECK, A_JYUUTAKU</td></tr>
+    <tr><td>articles/hojokin.html</td><td>A_HOJOKIN</td></tr>
+    <tr><td>articles/invoice.html</td><td>A_FREEE, A_MFW</td></tr>
+    <tr><td>articles/nisa.html</td><td>A_SBI, A_RAKUTEN_SEC</td></tr>
+    <tr><td>articles/aoyiro.html</td><td>A_FREEE, A_YAYOI</td></tr>
+    <tr><td>articles/roudou.html</td><td>A_SHAROUSHI, A_KINMU</td></tr>
+    <tr><td>articles/furusato.html</td><td>A_RAKUTEN_FN, A_SATOFULL</td></tr>
+    <tr><td>articles/hojokin2.html</td><td>A_HOJOKIN</td></tr>
+  </table>
+
+  <h2>STEP 4: 収益の見通し</h2>
+  <table>
+    <tr><th>月間PV</th><th>想定月収（目安）</th></tr>
+    <tr><td>1,000 PV</td><td>3,000〜10,000円</td></tr>
+    <tr><td>5,000 PV</td><td>15,000〜50,000円</td></tr>
+    <tr><td>10,000 PV</td><td>30,000〜100,000円</td></tr>
+    <tr><td>50,000 PV</td><td>150,000〜500,000円</td></tr>
+  </table>
+  <p>法律・税制ジャンルは専門家紹介・会計ソフトの単価が高いため、他ジャンルより高単価になりやすいです。</p>
+
+  <h2>注意事項</h2>
+  <p>・アフィリエイトリンクには必ず <code>rel="nofollow noopener"</code> を付けてください（SEO対策・既に設定済み）</p>
+  <p>・記事末尾に「※当サイトはアフィリエイト広告を利用しています」と表記する義務があります（景品表示法）</p>
+  <p>・投資・証券系は金融広告規制があるため、「〇〇がおすすめ」などの断定表現を避けてください</p>
+</div>
+</body>
+</html>
