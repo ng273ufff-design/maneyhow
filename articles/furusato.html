@@ -97,17 +97,67 @@ footer a{color:#6ee7b7!important;}
   <h2>ふるさと納税の仕組みおさらい</h2>
   <p>好きな自治体に寄付すると、寄付額から2,000円を引いた金額が翌年の住民税・所得税から控除されます。返礼品（食品・日用品など）も受け取れるため、実質2,000円の負担で返礼品が手に入る仕組みです。</p>
 
-  <h2>年収別・上限額の目安</h2>
+  <h2>かんたん上限額チェッカー</h2>
+  <div class="info-box" id="calc-box" style="background:#fff;border:2px solid #16a34a;">
+    <div class="box-title" style="font-size:15px;color:#0f2d5e;">💡 年収を入力してください（会社員・独身の目安）</div>
+    <div style="display:flex;align-items:center;gap:12px;margin:16px 0;">
+      <input type="number" id="income-input" placeholder="例：500" min="100" max="10000" step="10"
+        style="width:160px;padding:12px 16px;font-size:18px;font-weight:800;border:2px solid #e2e8f0;border-radius:10px;color:#0f172a;outline:none;transition:border 0.2s;"
+        oninput="calcLimit()" onfocus="this.style.borderColor='#16a34a'" onblur="this.style.borderColor='#e2e8f0'">
+      <span style="font-size:16px;font-weight:700;color:#374151;">万円</span>
+    </div>
+    <div id="calc-result" style="display:none;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #bbf7d0;border-radius:12px;padding:20px 24px;margin-top:8px;">
+      <div style="font-size:13px;color:#15803d;font-weight:700;margin-bottom:4px;">ふるさと納税の上限目安</div>
+      <div id="calc-amount" style="font-size:32px;font-weight:900;color:#15803d;"></div>
+      <div style="font-size:12px;color:#64748b;margin-top:8px;">※独身・扶養なし・給与所得のみの場合の目安です。正確な金額はシミュレーターでご確認ください。</div>
+    </div>
+    <div id="calc-empty" style="font-size:13px;color:#64748b;margin-top:4px;">年収を入力すると上限額が表示されます</div>
+  </div>
+  <script>
+  const limitTable = [
+    [100,12000],[200,15000],[300,28000],[350,34000],[400,42000],
+    [450,52000],[500,61000],[550,69000],[600,77000],[650,97000],
+    [700,108000],[750,118000],[800,129000],[850,140000],[900,151000],
+    [950,163000],[1000,176000],[1100,206000],[1200,234000],[1300,271000],
+    [1400,330000],[1500,395000],[1600,453000],[1700,514000],[1800,573000],
+    [1900,632000],[2000,695000],[2200,822000],[2500,1022000],[3000,1306000],
+    [3500,1583000],[4000,1860000]
+  ];
+  function calcLimit(){
+    const v=parseInt(document.getElementById('income-input').value)||0;
+    const res=document.getElementById('calc-result');
+    const empty=document.getElementById('calc-empty');
+    const amt=document.getElementById('calc-amount');
+    if(!v||v<100){res.style.display='none';empty.style.display='block';return;}
+    let limit=0;
+    if(v<=limitTable[0][0]){limit=limitTable[0][1];}
+    else if(v>=limitTable[limitTable.length-1][0]){limit=limitTable[limitTable.length-1][1];}
+    else{
+      for(let i=0;i<limitTable.length-1;i++){
+        if(v>=limitTable[i][0]&&v<limitTable[i+1][0]){
+          const r=(v-limitTable[i][0])/(limitTable[i+1][0]-limitTable[i][0]);
+          limit=Math.round(limitTable[i][1]+(limitTable[i+1][1]-limitTable[i][1])*r);
+          break;
+        }
+      }
+    }
+    amt.textContent='約 '+limit.toLocaleString()+'円';
+    res.style.display='block';empty.style.display='none';
+  }
+  </script>
+
+  <h2>年収別・上限額の目安一覧</h2>
   <div class="info-box">
-    <div class="box-title">💴 独身・夫婦（共働き）の場合の目安</div>
+    <div class="box-title">💴 独身・扶養なし（給与所得者）の場合の目安</div>
     <table class="compare-table" style="margin:0;">
-      <tr><th>年収</th><th>上限目安（独身）</th><th>上限目安（共働き）</th></tr>
-      <tr><td>300万円</td><td>約28,000円</td><td>約28,000円</td></tr>
-      <tr><td>400万円</td><td>約42,000円</td><td>約42,000円</td></tr>
-      <tr><td>500万円</td><td>約61,000円</td><td>約61,000円</td></tr>
-      <tr><td>600万円</td><td>約77,000円</td><td>約77,000円</td></tr>
-      <tr><td>700万円</td><td>約108,000円</td><td>約108,000円</td></tr>
-      <tr><td>800万円</td><td>約129,000円</td><td>約129,000円</td></tr>
+      <tr><th>年収</th><th>上限目安</th><th>年収</th><th>上限目安</th></tr>
+      <tr><td>300万円</td><td>約28,000円</td><td>1,000万円</td><td>約176,000円</td></tr>
+      <tr><td>400万円</td><td>約42,000円</td><td>1,200万円</td><td>約234,000円</td></tr>
+      <tr><td>500万円</td><td>約61,000円</td><td>1,500万円</td><td>約395,000円</td></tr>
+      <tr><td>600万円</td><td>約77,000円</td><td>2,000万円</td><td>約695,000円</td></tr>
+      <tr><td>700万円</td><td>約108,000円</td><td>2,500万円</td><td>約1,022,000円</td></tr>
+      <tr><td>800万円</td><td>約129,000円</td><td>3,000万円</td><td>約1,306,000円</td></tr>
+      <tr><td>900万円</td><td>約151,000円</td><td>4,000万円</td><td>約1,860,000円</td></tr>
     </table>
   </div>
   <p>扶養家族の有無・他の控除の有無によって上限額が変わります。ふるさと納税サイトのシミュレーターで正確な金額を確認しましょう。</p>
@@ -130,11 +180,51 @@ footer a{color:#6ee7b7!important;}
     <li>毎年12月31日までに寄付を完了させること</li>
   </ul>
 
+  <h2>おすすめ返礼品ランキング</h2>
+  <p>ふるさと納税の定番人気ジャンルと、各サイトで選べる返礼品をご紹介します。</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;">
+    <div class="info-box" style="margin:0;">
+      <div class="box-title">🥩 お肉・和牛</div>
+      <p style="font-size:13px;margin:0;color:#374151;">宮崎牛・松阪牛・神戸牛など高級和牛が人気No.1。普段なかなか買えないA5ランク牛肉がおすすめ。</p>
+    </div>
+    <div class="info-box" style="margin:0;">
+      <div class="box-title">🦞 海鮮・カニ</div>
+      <p style="font-size:13px;margin:0;color:#374151;">ズワイガニ・毛ガニ・ウニ・いくらなど北海道産海鮮が定番。鮮度重視なら冷凍より冷蔵で届くものを。</p>
+    </div>
+    <div class="info-box" style="margin:0;">
+      <div class="box-title">🍚 お米・雑穀</div>
+      <p style="font-size:13px;margin:0;color:#374151;">新潟・魚沼産コシヒカリや秋田あきたこまちなど。10kg〜30kgセットがコスパ最高。日常消費できる。</p>
+    </div>
+    <div class="info-box" style="margin:0;">
+      <div class="box-title">🍺 お酒・飲料</div>
+      <p style="font-size:13px;margin:0;color:#374151;">地ビール・地酒・焼酎・ウイスキーなど。飲み比べセットは贈答品にもなる人気返礼品。</p>
+    </div>
+    <div class="info-box" style="margin:0;">
+      <div class="box-title">🧴 日用品・消耗品</div>
+      <p style="font-size:13px;margin:0;color:#374151;">トイレットペーパー・洗剤・ティッシュなど生活必需品も充実。使い切れる実用派向け返礼品。</p>
+    </div>
+    <div class="info-box" style="margin:0;">
+      <div class="box-title">🛏 体験・旅行券</div>
+      <p style="font-size:13px;margin:0;color:#374151;">温泉旅館・ホテル宿泊券や地域クーポン。現地で使える体験型返礼品は思い出にもなる。</p>
+    </div>
+  </div>
+
+  <h2>おすすめふるさと納税サイト比較</h2>
+  <table class="compare-table">
+    <tr><th>サイト</th><th>特徴</th><th>ポイント還元</th></tr>
+    <tr><td><strong>楽天ふるさと納税</strong></td><td>楽天市場と一体。品数が多い。</td><td>楽天ポイント（※SPUは2024年に対象外へ変更）</td></tr>
+    <tr><td><strong>さとふる</strong></td><td>使いやすいUIとシミュレーター。</td><td>Pontaポイント・PayPayポイント</td></tr>
+    <tr><td><strong>ふるなび</strong></td><td>家電返礼品が充実。</td><td>ふるなびコイン→Amazonギフト等</td></tr>
+    <tr><td><strong>ふるさとチョイス</strong></td><td>掲載数No.1。返礼品の幅が最大。</td><td>なし（自治体ポイントあり）</td></tr>
+  </table>
+  <p style="font-size:13px;color:#64748b;">※楽天ふるさと納税のSPU対象は2024年に変更されました。楽天ポイントは付与されますが、SPU倍率加算の対象外となっています。お買い物マラソン等の特典とは別で計算されます。</p>
+
   <div class="aff-section">
-    <h3>🎁 ふるさと納税はポイント還元があるサイトがお得</h3>
-    <p>楽天ふるさと納税はSPU対象。楽天市場のお買い物マラソンと組み合わせると還元率アップ。</p>
+    <h3>🎁 まずはシミュレーターで上限額を確認しよう</h3>
+    <p>各サイトに無料のシミュレーターがあります。年収入力だけで上限の目安がわかります。</p>
     <a href="https://rpx.a8.net/svt/ejp?a8mat=4B1WM2+EDDPGY+2HOM+6C1VM&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26042907724_4B1WM2_EDDPGY_2HOM_6C1VM%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" class="aff-btn" target="_blank" rel="nofollow noopener">楽天ふるさと納税を見る</a>
-    <a href="https://www.satofull.jp/" class="aff-btn outline" target="_blank" rel="nofollow noopener">さとふるで上限額を計算</a>
+    <a href="https://www.satofull.jp/" class="aff-btn outline" target="_blank" rel="nofollow noopener">さとふるを見る</a>
+    <a href="https://furunavi.jp/" class="aff-btn outline" target="_blank" rel="nofollow noopener">ふるなびを見る</a>
   </div>
 
   <div class="summary-box">
@@ -149,7 +239,7 @@ footer a{color:#6ee7b7!important;}
   <p style="font-size:12px;color:var(--muted);margin-top:40px">※上限額は概算です。正確な金額は各ふるさと納税サイトのシミュレーターや税理士にご確認ください。</p>
 </div>
 <footer>
-  <p>© 2026 マネーハウ | <a href="../index.html">トップへ</a> | <a href="#">プライバシーポリシー</a> | <a href="#">免責事項</a></p>
+  <p>© 2026 マネとく | <a href="../index.html">トップへ</a> | <a href="#">プライバシーポリシー</a> | <a href="#">免責事項</a></p>
 </footer>
 </body>
 </html>
