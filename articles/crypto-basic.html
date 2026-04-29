@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ビットコインって結局何？初心者向けにわかりやすく解説【2026年版】| マネとく</title>
+<meta name="description" content="ビットコイン・仮想通貨の仕組みを初心者向けにわかりやすく解説。買い方・リスク・税金まで基礎をまとめました。">
+<meta property="og:title" content="ビットコインって結局何？初心者向けにわかりやすく解説【2026年版】| マネとく">
+<meta property="og:description" content="ビットコイン・仮想通貨の仕組みを初心者向けにわかりやすく解説。買い方・リスク・税金まで基礎をまとめました。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ng273ufff-design.github.io/maneyhow/articles/crypto-basic.html">
+<meta property="og:site_name" content="マネとく">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@manetoku_jp">
+<style>
+  :root{--bg:#f0f4f8;--bg2:#ffffff;--bg3:#f8fafc;--accent:#16a34a;--navy:#0f2d5e;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;line-height:1.8;}
+  a{color:var(--accent);}
+  header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 1px 8px rgba(15,45,94,0.06);padding:0 24px;}
+  .header-inner{max-width:900px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:20px;font-weight:900;color:var(--navy);text-decoration:none;}.logo span{color:var(--accent);}
+  .back{color:var(--muted);font-size:13px;text-decoration:none;}.back:hover{color:var(--navy);}
+  .article-wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+  .article-meta{display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+  .tag{font-size:11px;font-weight:700;padding:3px 12px;border-radius:10px;}
+  .tag-crypto{background:#fef3c7;color:#d97706;}
+  .date,.read-time{font-size:12px;color:var(--muted);}
+  h1{font-size:clamp(22px,4vw,32px);font-weight:900;line-height:1.4;margin-bottom:24px;color:var(--navy);}
+  .lead{background:#fff;border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;font-size:15px;line-height:1.8;margin-bottom:40px;color:#374151;box-shadow:0 2px 8px rgba(15,45,94,0.08);}
+  h2{font-size:20px;font-weight:900;margin:40px 0 16px;padding-left:16px;border-left:4px solid var(--accent);color:var(--navy);}
+  h3{font-size:16px;font-weight:800;margin:28px 0 12px;color:#2563eb;}
+  p{margin-bottom:16px;font-size:15px;color:#374151;}
+  .info-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;margin:24px 0;}
+  .info-box .box-title{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:12px;}
+  .check-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .check-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#374151;}
+  .check-list li::before{content:'✓';color:var(--accent);font-weight:900;flex-shrink:0;margin-top:2px;}
+  .compare-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;}
+  .compare-table th{background:var(--navy);color:#fff;padding:10px 16px;text-align:left;font-weight:700;}
+  .compare-table td{padding:12px 16px;border-bottom:1px solid var(--border);color:#374151;background:#fff;}
+  .compare-table tr:last-child td{border-bottom:none;}
+  .warning-box{background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:20px 24px;margin:24px 0;}
+  .warning-box .box-title{font-size:13px;font-weight:800;color:#dc2626;margin-bottom:8px;}
+  .aff-section{background:linear-gradient(135deg,#0f2d5e,#1e4d8c);border-radius:16px;padding:32px;margin:48px 0;text-align:center;}
+  .aff-section h3{font-size:18px;margin-bottom:8px;color:#fff!important;}
+  .aff-section p{font-size:13px;color:rgba(255,255,255,0.75)!important;margin-bottom:20px;}
+  .aff-btn{display:inline-block;background:#16a34a;color:#fff;font-size:14px;font-weight:800;padding:12px 28px;border-radius:30px;text-decoration:none;margin:4px;}
+  .aff-btn.outline{background:transparent;border:1.5px solid rgba(255,255,255,0.5);color:#fff;}
+  .summary-box{background:linear-gradient(135deg,rgba(22,163,74,0.08),rgba(22,163,74,0.03));border:1px solid rgba(22,163,74,0.25);border-radius:16px;padding:28px;margin:40px 0;}
+  .summary-box h3{font-size:16px;font-weight:900;color:var(--accent);margin-bottom:16px;}
+  footer{background:var(--navy);padding:32px 24px;text-align:center;color:rgba(255,255,255,0.6);font-size:12px;}
+  footer a{color:#6ee7b7;text-decoration:none;}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="logo">マネ<span>とく</span></a>
+    <a href="../index.html" class="back">← 記事一覧</a>
+  </div>
+</header>
+<div class="article-wrap">
+  <div class="article-meta">
+    <span class="tag tag-crypto">仮想通貨入門</span>
+    <span class="date">2026年4月29日</span>
+    <span class="read-time">📖 約5分</span>
+  </div>
+  <h1>ビットコインって結局何？初心者向けにわかりやすく解説【2026年版】</h1>
+  <div class="lead">
+    「ビットコインは聞いたことあるけど、正直よくわからない」という方へ。仕組み・買い方・リスク・税金まで、難しい用語を使わずに解説します。
+  </div>
+
+  <h2>ビットコインとは何か</h2>
+  <p>ビットコイン（BTC）は、2009年に登場した世界初の<strong>暗号資産（仮想通貨）</strong>です。国や銀行が管理する円やドルとは違い、インターネット上で個人間で直接やり取りできる「デジタルのお金」です。</p>
+  <p>発行上限は2100万BTCと決まっており、希少性があることから「デジタルゴールド」とも呼ばれます。</p>
+
+  <div class="info-box">
+    <div class="box-title">💡 ビットコインの特徴</div>
+    <ul class="check-list">
+      <li>国・銀行に依存しない分散型の通貨</li>
+      <li>発行上限が2100万枚と決まっている</li>
+      <li>24時間365日取引可能</li>
+      <li>1円以下の少額から購入できる</li>
+      <li>世界中どこへでも低コストで送金できる</li>
+    </ul>
+  </div>
+
+  <h2>ビットコイン以外の主な仮想通貨</h2>
+  <table class="compare-table">
+    <tr><th>通貨名</th><th>特徴</th></tr>
+    <tr><td><strong>ビットコイン（BTC）</strong></td><td>時価総額1位。デジタルゴールド的存在</td></tr>
+    <tr><td>イーサリアム（ETH）</td><td>スマートコントラクト対応。NFTやDeFiの基盤</td></tr>
+    <tr><td>リップル（XRP）</td><td>国際送金に特化。銀行との連携が多い</td></tr>
+    <tr><td>ソラナ（SOL）</td><td>処理速度が速くガス代が安い</td></tr>
+  </table>
+
+  <h2>買い方の基本ステップ</h2>
+  <p>仮想通貨を買うには<strong>取引所の口座開設</strong>が必要です。国内の主要取引所はどこも無料で口座を作れます。</p>
+  <ol style="list-style:decimal;padding-left:20px;display:flex;flex-direction:column;gap:10px;font-size:14px;color:#374151;margin-bottom:16px;">
+    <li>取引所に口座開設（本人確認あり・無料）</li>
+    <li>銀行振込などで日本円を入金</li>
+    <li>購入したい通貨を選んで金額を入力</li>
+    <li>購入完了（500円程度から始められる）</li>
+  </ol>
+
+  <div class="warning-box">
+    <div class="box-title">⚠️ リスクを理解してから始めよう</div>
+    <p style="font-size:14px;color:#374151;margin:0;">仮想通貨は価格変動が激しく、短期間で大きく下落することがあります。余剰資金の範囲内で、失っても生活に影響のない金額から始めましょう。</p>
+  </div>
+
+  <h2>税金はどうなる？</h2>
+  <p>仮想通貨の利益は<strong>雑所得</strong>として課税されます。給与所得などと合算して確定申告が必要になる場合があります。詳しくは<a href="crypto-tax.html">仮想通貨の確定申告記事</a>をご覧ください。</p>
+
+  <div class="aff-section">
+    <h3>🪙 まずは口座開設から</h3>
+    <p>国内主要取引所。無料で開設できます。</p>
+    <a href="#" class="aff-btn" target="_blank" rel="nofollow noopener">Coincheckで始める</a>
+    <a href="#" class="aff-btn outline" target="_blank" rel="nofollow noopener">bitFlyerを見る</a>
+  </div>
+
+  <div class="summary-box">
+    <h3>📋 まとめ</h3>
+    <ul class="check-list">
+      <li>ビットコインは国・銀行に依存しないデジタル通貨</li>
+      <li>発行上限2100万枚の希少性がある</li>
+      <li>500円程度の少額から始められる</li>
+      <li>価格変動リスクがあるため余剰資金で始めること</li>
+      <li>利益は雑所得として確定申告が必要</li>
+    </ul>
+  </div>
+  <p style="font-size:12px;color:var(--muted);margin-top:40px">※本記事の情報は2026年4月時点のものです。投資は自己責任で行ってください。個別の判断はファイナンシャルプランナー等にご相談ください。</p>
+</div>
+<footer>
+  <p>© 2026 マネとく | <a href="../index.html">トップへ</a> | <a href="#">プライバシーポリシー</a> | <a href="#">免責事項</a></p>
+</footer>
+</body>
+</html>
