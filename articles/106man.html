@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>年収106万円の壁が全企業に拡大【2026年版】| マネーハウ</title>
+<meta name="description" content="2026年10月から社会保険の適用拡大が全企業に広がります。パート・アルバイトの手取りへの影響と対策を徹底解説。">
+<style>
+  :root {
+    --bg: #0a0f1e;
+    --bg2: #0d1b2a;
+    --bg3: #112033;
+    --accent: #00d4aa;
+    --text: #f0f4f8;
+    --muted: rgba(240,244,248,0.55);
+    --border: rgba(255,255,255,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif; line-height: 1.8; }
+  a { color: var(--accent); }
+
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(10,15,30,0.9); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border); padding: 0 24px;
+  }
+  .header-inner {
+    max-width: 900px; margin: 0 auto; height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-size: 20px; font-weight: 900; color: var(--text); text-decoration: none; }
+  .logo span { color: var(--accent); }
+  .back { color: var(--muted); font-size: 13px; text-decoration: none; }
+  .back:hover { color: var(--accent); }
+
+  .article-wrap { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  .article-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+  .tag { font-size: 11px; font-weight: 700; padding: 3px 12px; border-radius: 10px; }
+  .tag-law { background: rgba(0,212,170,0.15); color: var(--accent); }
+  .date { font-size: 12px; color: var(--muted); }
+  .read-time { font-size: 12px; color: var(--muted); }
+
+  h1 { font-size: clamp(22px,4vw,32px); font-weight: 900; line-height: 1.4; margin-bottom: 24px; }
+
+  .lead {
+    background: var(--bg2); border-left: 4px solid var(--accent);
+    border-radius: 0 12px 12px 0; padding: 20px 24px;
+    font-size: 15px; color: var(--text); line-height: 1.8; margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 20px; font-weight: 900; margin: 40px 0 16px;
+    padding-left: 16px; border-left: 4px solid var(--accent);
+  }
+  h3 { font-size: 16px; font-weight: 800; margin: 28px 0 12px; color: var(--accent); }
+  p { margin-bottom: 16px; font-size: 15px; color: rgba(240,244,248,0.85); }
+
+  .info-box {
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px; margin: 24px 0;
+  }
+  .info-box .box-title {
+    font-size: 13px; font-weight: 800; color: var(--accent);
+    margin-bottom: 12px; letter-spacing: 0.5px;
+  }
+
+  .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .check-list li {
+    display: flex; gap: 10px; align-items: flex-start;
+    font-size: 14px; color: rgba(240,244,248,0.85);
+  }
+  .check-list li::before { content: '✓'; color: var(--accent); font-weight: 900; flex-shrink: 0; margin-top: 2px; }
+
+  .compare-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+  .compare-table th {
+    background: rgba(0,212,170,0.15); color: var(--accent);
+    padding: 10px 16px; text-align: left; font-weight: 700;
+    border-bottom: 1px solid rgba(0,212,170,0.3);
+  }
+  .compare-table td {
+    padding: 12px 16px; border-bottom: 1px solid var(--border);
+    color: rgba(240,244,248,0.85);
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+
+  .warning-box {
+    background: rgba(255,80,80,0.08); border: 1px solid rgba(255,80,80,0.3);
+    border-radius: 12px; padding: 20px 24px; margin: 24px 0;
+  }
+  .warning-box .box-title { color: #ff5050; }
+
+  .good-box {
+    background: rgba(100,200,100,0.08); border: 1px solid rgba(100,200,100,0.3);
+    border-radius: 12px; padding: 20px 24px; margin: 24px 0;
+  }
+  .good-box .box-title { color: #64c864; }
+
+  /* アフィリエイト */
+  .aff-section {
+    background: linear-gradient(135deg, var(--bg3), #0f2840);
+    border: 1px solid var(--border); border-radius: 16px;
+    padding: 32px; margin: 48px 0; text-align: center;
+  }
+  .aff-section h3 { font-size: 18px; margin-bottom: 8px; color: var(--text); }
+  .aff-section p { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .aff-btn {
+    display: inline-block; background: var(--accent); color: #000;
+    font-size: 14px; font-weight: 800; padding: 12px 28px;
+    border-radius: 30px; text-decoration: none; margin: 4px;
+  }
+  .aff-btn.outline {
+    background: transparent; border: 1px solid var(--accent); color: var(--accent);
+  }
+
+  .summary-box {
+    background: linear-gradient(135deg, rgba(0,212,170,0.1), rgba(0,212,170,0.05));
+    border: 1px solid rgba(0,212,170,0.3); border-radius: 16px;
+    padding: 28px; margin: 40px 0;
+  }
+  .summary-box h3 { font-size: 16px; font-weight: 900; color: var(--accent); margin-bottom: 16px; }
+
+  footer {
+    border-top: 1px solid var(--border); padding: 32px 24px;
+    text-align: center; color: var(--muted); font-size: 12px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="logo">マネー<span>ハウ</span></a>
+    <a href="../index.html" class="back">← 記事一覧</a>
+  </div>
+</header>
+
+<div class="article-wrap">
+
+  <div class="article-meta">
+    <span class="tag tag-law">法改正</span>
+    <span class="date">2026年4月29日</span>
+    <span class="read-time">📖 約5分</span>
+  </div>
+
+  <h1>年収106万円の壁が全企業に拡大。パート・アルバイトが知っておくべきこと【2026年版】</h1>
+
+  <div class="lead">
+    2026年10月から、社会保険（健康保険・厚生年金）の加入義務が<strong>全ての企業規模に拡大</strong>されます。これまで従業員51人以上の企業だけが対象でしたが、今後はパートを1人でも雇う小規模事業者も対象になります。手取りに大きく影響する可能性があるため、今すぐ確認しておきましょう。
+  </div>
+
+  <h2>そもそも「106万円の壁」とは？</h2>
+
+  <p>「106万円の壁」とは、年収が106万円（月8.8万円）を超えると、<strong>自分で社会保険に加入しなければならなくなる基準</strong>のことです。</p>
+
+  <p>社会保険に加入すると、毎月の給与から健康保険料と厚生年金保険料が天引きされます。その額は収入によって異なりますが、月1〜2万円程度が追加で引かれることも珍しくありません。</p>
+
+  <div class="info-box">
+    <div class="box-title">📌 社会保険加入の条件（2026年10月〜）</div>
+    <ul class="check-list">
+      <li>週20時間以上の勤務</li>
+      <li>月額賃金8.8万円以上（年収106万円相当）</li>
+      <li>2ヶ月を超える雇用の見込み</li>
+      <li>学生ではないこと</li>
+    </ul>
+  </div>
+
+  <h2>2026年から何が変わるの？</h2>
+
+  <p>これまでは「従業員51人以上の企業」が対象でした。2026年10月からは、<strong>企業規模に関係なく全ての事業所</strong>が対象になります。</p>
+
+  <table class="compare-table">
+    <tr>
+      <th>時期</th>
+      <th>対象企業</th>
+    </tr>
+    <tr>
+      <td>〜2024年9月</td>
+      <td>従業員101人以上</td>
+    </tr>
+    <tr>
+      <td>2024年10月〜2026年9月</td>
+      <td>従業員51人以上</td>
+    </tr>
+    <tr>
+      <td><strong>2026年10月〜</strong></td>
+      <td><strong>全企業（規模問わず）</strong></td>
+    </tr>
+  </table>
+
+  <div class="warning-box">
+    <div class="box-title">⚠️ 特に注意が必要な人</div>
+    <ul class="check-list">
+      <li>小規模な美容室・飲食店・小売店でパートをしている方</li>
+      <li>複数のアルバイトを掛け持ちしている方（合算はされません）</li>
+      <li>扶養内で働くことを重視している方</li>
+    </ul>
+  </div>
+
+  <h2>手取りへの影響は？</h2>
+
+  <p>例えば、月収9万円（年収108万円）で新たに社会保険加入になった場合：</p>
+
+  <table class="compare-table">
+    <tr>
+      <th>項目</th>
+      <th>月額</th>
+    </tr>
+    <tr>
+      <td>健康保険料（本人負担分）</td>
+      <td>約4,500円</td>
+    </tr>
+    <tr>
+      <td>厚生年金保険料（本人負担分）</td>
+      <td>約8,200円</td>
+    </tr>
+    <tr>
+      <td><strong>合計減額</strong></td>
+      <td><strong>約12,700円/月</strong></td>
+    </tr>
+  </table>
+
+  <p>年間で約15万円手取りが減る計算になります。ただし、将来の年金受給額が増えたり、傷病手当金などの保障が充実するメリットもあります。</p>
+
+  <h2>どう対応すればいい？</h2>
+
+  <h3>パターン①：扶養内に収めたい場合</h3>
+  <p>勤務時間を週20時間未満か、月収8.8万円以下に抑えることで、加入を回避できます。職場と相談してシフトを調整しましょう。</p>
+
+  <h3>パターン②：積極的に加入するメリットを取る場合</h3>
+  <p>逆に収入を増やして社会保険に加入することで、将来の厚生年金が増え、傷病時の保障も手厚くなります。長期的にはプラスになる可能性も。</p>
+
+  <div class="good-box">
+    <div class="box-title">✅ 今すぐやること</div>
+    <ul class="check-list">
+      <li>現在の週の勤務時間と月収を確認する</li>
+      <li>2026年10月に向けて職場のHRに確認する</li>
+      <li>社労士や税理士に試算を依頼する（下記参照）</li>
+    </ul>
+  </div>
+
+  <!-- アフィリエイト -->
+  <div class="aff-section">
+    <h3>💬 社会保険・扶養の個別相談はこちら</h3>
+    <p>「自分の場合はどうなるの？」という疑問は、専門家への相談が一番確実です。</p>
+    <a href="#" class="aff-btn">社労士ドットコムで無料相談</a>
+    <a href="#" class="aff-btn outline">税理士紹介サービスを見る</a>
+  </div>
+
+  <div class="summary-box">
+    <h3>📋 この記事のまとめ</h3>
+    <ul class="check-list">
+      <li>2026年10月から社会保険の適用が全企業に拡大</li>
+      <li>週20時間以上・月8.8万円以上が加入条件</li>
+      <li>加入で月1〜1.5万円程度手取りが減る可能性</li>
+      <li>扶養内を維持するなら今から勤務時間の調整を</li>
+      <li>逆に加入を受け入れて収入増を目指す選択肢も</li>
+    </ul>
+  </div>
+
+  <p style="font-size:12px;color:var(--muted);margin-top:40px">※本記事の情報は2026年4月時点のものです。法令は改正される場合があります。個別の判断は社会保険労務士・税理士にご相談ください。</p>
+
+</div>
+
+<footer>
+  <p>© 2026 マネーハウ | <a href="../index.html">トップへ</a> | <a href="#">プライバシーポリシー</a> | <a href="#">免責事項</a></p>
+</footer>
+
+</body>
+</html>
