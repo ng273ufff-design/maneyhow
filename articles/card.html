@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年版おすすめクレジットカード比較【目的別ランキング】| マネとく</title>
+<meta name="description" content="年会費無料・高還元・ゴールドカードを目的別に徹底比較。楽天・三井住友・JCBカードWなど人気カードの特徴を一覧で解説します。">
+<style>
+  :root{--bg:#f0f4f8;--white:#ffffff;--navy:#0f2d5e;--accent:#16a34a;--accent2:#2563eb;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;--shadow:0 2px 12px rgba(15,45,94,0.08);--shadow-hover:0 8px 28px rgba(15,45,94,0.15);}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;line-height:1.8;}
+  a{color:var(--accent);}
+  header{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 1px 8px rgba(15,45,94,0.06);padding:0 24px;}
+  .header-inner{max-width:900px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:20px;font-weight:900;color:var(--navy);text-decoration:none;}.logo span{color:var(--accent);}
+  .back{color:var(--muted);font-size:13px;text-decoration:none;}.back:hover{color:var(--navy);}
+  .article-wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+  .article-meta{display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+  .tag{font-size:11px;font-weight:700;padding:3px 12px;border-radius:10px;}
+  .tag-card{background:#fce7f3;color:#be185d;}
+  .date,.read-time{font-size:12px;color:var(--muted);}
+  h1{font-size:clamp(20px,4vw,30px);font-weight:900;line-height:1.4;margin-bottom:24px;color:var(--navy);}
+  .lead{background:var(--white);border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;font-size:15px;line-height:1.8;margin-bottom:40px;box-shadow:var(--shadow);}
+  h2{font-size:20px;font-weight:900;margin:40px 0 16px;padding-left:16px;border-left:4px solid var(--accent);color:var(--navy);}
+  h3{font-size:16px;font-weight:800;margin:28px 0 12px;color:var(--accent2);}
+  p{margin-bottom:16px;font-size:15px;color:#374151;}
+
+  /* カード比較テーブル */
+  .card-compare{width:100%;border-collapse:collapse;margin:20px 0;font-size:13px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+  .card-compare th{background:var(--navy);color:#fff;padding:12px 14px;text-align:left;font-weight:700;font-size:12px;}
+  .card-compare td{padding:14px;border-bottom:1px solid var(--border);background:var(--white);vertical-align:top;color:#374151;}
+  .card-compare tr:last-child td{border-bottom:none;}
+  .card-compare tr:hover td{background:#f8fafc;}
+  .rank{font-weight:900;color:var(--navy);font-size:16px;}
+  .rank-1{color:#d97706;}
+  .rank-2{color:#6b7280;}
+  .rank-3{color:#b45309;}
+  .badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:6px;display:inline-block;margin-top:4px;}
+  .badge-free{background:#dcfce7;color:#15803d;}
+  .badge-high{background:#fef9c3;color:#a16207;}
+  .badge-prem{background:#f3e8ff;color:#7c3aed;}
+
+  /* 個別カードカード */
+  .card-detail{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:24px;margin:24px 0;box-shadow:var(--shadow);}
+  .card-detail-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px;}
+  .card-name{font-size:18px;font-weight:900;color:var(--navy);}
+  .card-fee{font-size:13px;color:var(--muted);margin-top:4px;}
+  .card-icon{font-size:48px;flex-shrink:0;}
+  .spec-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:16px 0;}
+  @media(max-width:600px){.spec-list{grid-template-columns:1fr;}}
+  .spec-item{background:#f8fafc;border-radius:8px;padding:10px 14px;}
+  .spec-label{font-size:11px;color:var(--muted);font-weight:600;margin-bottom:2px;}
+  .spec-value{font-size:14px;font-weight:800;color:var(--text);}
+  .pros-cons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
+  @media(max-width:600px){.pros-cons{grid-template-columns:1fr;}}
+  .pros{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:14px;}
+  .cons{background:#fef2f2;border:1px solid #fecaca;border-radius:10px;padding:14px;}
+  .pros-title{font-size:12px;font-weight:800;color:#15803d;margin-bottom:8px;}
+  .cons-title{font-size:12px;font-weight:800;color:#dc2626;margin-bottom:8px;}
+  .pros ul,.cons ul{list-style:none;display:flex;flex-direction:column;gap:6px;}
+  .pros li,.cons li{font-size:13px;color:#374151;display:flex;gap:6px;}
+  .pros li::before{content:'✓';color:#15803d;font-weight:900;flex-shrink:0;}
+  .cons li::before{content:'✗';color:#dc2626;font-weight:900;flex-shrink:0;}
+
+  /* おすすめ別 */
+  .recommend-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0;}
+  @media(max-width:600px){.recommend-grid{grid-template-columns:1fr;}}
+  .rec-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px;box-shadow:var(--shadow);}
+  .rec-label{font-size:11px;font-weight:700;color:var(--muted);margin-bottom:6px;}
+  .rec-card-name{font-size:15px;font-weight:900;color:var(--navy);margin-bottom:4px;}
+  .rec-reason{font-size:12px;color:#374151;}
+
+  /* アフィリエイト */
+  .aff-section{background:linear-gradient(135deg,var(--navy),#1e4d8c);border-radius:16px;padding:32px;margin:48px 0;text-align:center;color:#fff;}
+  .aff-section h3{font-size:18px;margin-bottom:8px;color:#fff;}
+  .aff-section p{font-size:13px;opacity:0.75;margin-bottom:20px;}
+  .aff-btn{display:inline-block;background:var(--accent);color:#fff;font-size:14px;font-weight:800;padding:12px 28px;border-radius:30px;text-decoration:none;margin:4px;transition:opacity 0.2s;}
+  .aff-btn:hover{opacity:0.85;}
+  .aff-btn.outline{background:transparent;border:1.5px solid rgba(255,255,255,0.5);color:#fff;}
+
+  .summary-box{background:linear-gradient(135deg,rgba(22,163,74,0.08),rgba(22,163,74,0.03));border:1px solid rgba(22,163,74,0.25);border-radius:16px;padding:28px;margin:40px 0;}
+  .summary-box h3{font-size:16px;font-weight:900;color:var(--accent);margin-bottom:16px;}
+  .check-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .check-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#374151;}
+  .check-list li::before{content:'✓';color:var(--accent);font-weight:900;flex-shrink:0;margin-top:2px;}
+
+  .info-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin:24px 0;box-shadow:var(--shadow);}
+  .info-box .box-title{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:12px;}
+
+  footer{background:var(--navy);color:rgba(255,255,255,0.6);padding:40px 24px;text-align:center;font-size:13px;}
+  footer a{color:#6ee7b7;text-decoration:none;}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="logo">マネ<span>とく</span></a>
+    <a href="../index.html" class="back">← 記事一覧</a>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <div class="article-meta">
+    <span class="tag tag-card">クレカ</span>
+    <span class="date">2026年4月29日</span>
+    <span class="read-time">📖 約8分</span>
+  </div>
+
+  <h1>2026年版おすすめクレジットカード比較【目的別ランキング】最強の1枚はこれだ</h1>
+
+  <div class="lead">
+    クレジットカードは選び方次第で<strong>年間数万円のポイント差</strong>が生まれます。年会費無料・高還元・ゴールド・ビジネス用途別に2026年のおすすめを徹底比較。自分に合う「最強の1枚」を選ぶヒントをお届けします。
+  </div>
+
+  <h2>目的別おすすめ早見表</h2>
+  <div class="recommend-grid">
+    <div class="rec-card">
+      <div class="rec-label">💳 とにかく得したい・高還元</div>
+      <div class="rec-card-name">楽天カード</div>
+      <div class="rec-reason">常時1%還元＋楽天経済圏で最大3%以上。楽天市場をよく使う人に最適。</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-label">🔒 セキュリティ重視・ナンバーレス</div>
+      <div class="rec-card-name">三井住友カード(NL)</div>
+      <div class="rec-reason">カード番号が裏面に印字なし。コンビニ・マクドで最大7%還元。</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-label">🎯 若者・初めての1枚（39歳以下）</div>
+      <div class="rec-card-name">JCBカードW</div>
+      <div class="rec-reason">年会費永年無料で還元率2倍。39歳までに申込めば40歳以降も継続可。</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-label">⭐ ゴールドを狙いたい</div>
+      <div class="rec-card-name">三井住友ゴールド(NL)</div>
+      <div class="rec-reason">年間100万円利用で年会費永年無料。SBI証券との相性抜群。</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-label">📱 PayPayユーザー</div>
+      <div class="rec-card-name">PayPayカード</div>
+      <div class="rec-reason">PayPay連携で最大1.5%還元。Yahoo!ショッピングでさらにお得。</div>
+    </div>
+    <div class="rec-card">
+      <div class="rec-label">🏢 個人事業主・法人利用</div>
+      <div class="rec-card-name">三井住友ビジネスオーナーズ</div>
+      <div class="rec-reason">年会費無料のビジネスカード。法人・個人事業主どちらでも申込可能。</div>
+    </div>
+  </div>
+
+  <h2>主要カード一覧比較表</h2>
+  <table class="card-compare">
+    <tr>
+      <th>カード名</th>
+      <th>年会費</th>
+      <th>基本還元率</th>
+      <th>特徴</th>
+    </tr>
+    <tr>
+      <td><strong>楽天カード</strong><br><span class="badge badge-free">年会費無料</span></td>
+      <td>永年無料</td>
+      <td><strong>1.0%</strong></td>
+      <td>楽天市場3〜5倍、楽天経済圏で最強</td>
+    </tr>
+    <tr>
+      <td><strong>三井住友カード(NL)</strong><br><span class="badge badge-free">年会費無料</span></td>
+      <td>永年無料</td>
+      <td><strong>0.5%</strong><br>（コンビニ最大7%）</td>
+      <td>ナンバーレス・コンビニ高還元・Vポイント</td>
+    </tr>
+    <tr>
+      <td><strong>JCBカードW</strong><br><span class="badge badge-high">39歳以下限定</span></td>
+      <td>永年無料</td>
+      <td><strong>1.0%</strong></td>
+      <td>スタバ・Amazon・セブンで最大5.5倍</td>
+    </tr>
+    <tr>
+      <td><strong>PayPayカード</strong><br><span class="badge badge-free">年会費無料</span></td>
+      <td>永年無料</td>
+      <td><strong>1.0%</strong></td>
+      <td>PayPay連携・Yahoo!ショッピング相性◎</td>
+    </tr>
+    <tr>
+      <td><strong>エポスカード</strong><br><span class="badge badge-free">年会費無料</span></td>
+      <td>永年無料</td>
+      <td><strong>0.5%</strong></td>
+      <td>海外旅行保険自動付帯・マルイ優待</td>
+    </tr>
+    <tr>
+      <td><strong>三井住友ゴールド(NL)</strong><br><span class="badge badge-prem">条件付き無料</span></td>
+      <td>5,500円<br>（年100万円で永年無料）</td>
+      <td><strong>0.5%</strong><br>（コンビニ最大7%）</td>
+      <td>空港ラウンジ・SBI証券連携・年間ボーナス</td>
+    </tr>
+    <tr>
+      <td><strong>アメックスグリーン</strong><br><span class="badge badge-prem">プレミアム</span></td>
+      <td>月1,100円</td>
+      <td><strong>1.0%</strong></td>
+      <td>旅行特典・コンシェルジュ・空港ラウンジ</td>
+    </tr>
+  </table>
+
+  <h2>カード詳細レビュー</h2>
+
+  <!-- 楽天カード -->
+  <div class="card-detail">
+    <div class="card-detail-header">
+      <div>
+        <div class="card-name">🔴 楽天カード</div>
+        <div class="card-fee">年会費：永年無料</div>
+      </div>
+      <div class="card-icon">💳</div>
+    </div>
+    <div class="spec-list">
+      <div class="spec-item"><div class="spec-label">基本還元率</div><div class="spec-value">1.0%（楽天市場は3〜5倍）</div></div>
+      <div class="spec-item"><div class="spec-label">国際ブランド</div><div class="spec-value">VISA / Master / JCB / AMEX</div></div>
+      <div class="spec-item"><div class="spec-label">ポイント</div><div class="spec-value">楽天ポイント（1pt=1円）</div></div>
+      <div class="spec-item"><div class="spec-label">付帯保険</div><div class="spec-value">海外旅行傷害保険（利用付帯）</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros">
+        <div class="pros-title">メリット</div>
+        <ul>
+          <li>楽天市場でSPUが積み重なり最大16倍以上も</li>
+          <li>楽天銀行・証券・保険との連携で還元アップ</li>
+          <li>年会費永年無料で審査が通りやすい</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <div class="cons-title">デメリット</div>
+        <ul>
+          <li>楽天経済圏以外では1%還元止まり</li>
+          <li>楽天ポイントの使途に縛られる</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 三井住友(NL) -->
+  <div class="card-detail">
+    <div class="card-detail-header">
+      <div>
+        <div class="card-name">🔵 三井住友カード(NL)</div>
+        <div class="card-fee">年会費：永年無料</div>
+      </div>
+      <div class="card-icon">💳</div>
+    </div>
+    <div class="spec-list">
+      <div class="spec-item"><div class="spec-label">基本還元率</div><div class="spec-value">0.5%（コンビニ・マクド最大7%）</div></div>
+      <div class="spec-item"><div class="spec-label">国際ブランド</div><div class="spec-value">VISA / Master</div></div>
+      <div class="spec-item"><div class="spec-label">ポイント</div><div class="spec-value">Vポイント（1pt=1円相当）</div></div>
+      <div class="spec-item"><div class="spec-label">特徴</div><div class="spec-value">カード番号が表面に非表示</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros">
+        <div class="pros-title">メリット</div>
+        <ul>
+          <li>セブン・ローソン・マクドで最大7%還元</li>
+          <li>ナンバーレスでセキュリティが高い</li>
+          <li>SBI証券のVポイント投資に使える</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <div class="cons-title">デメリット</div>
+        <ul>
+          <li>コンビニ以外は0.5%とやや低め</li>
+          <li>JCBブランドが選べない</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- JCBカードW -->
+  <div class="card-detail">
+    <div class="card-detail-header">
+      <div>
+        <div class="card-name">🟢 JCBカードW（39歳以下限定）</div>
+        <div class="card-fee">年会費：永年無料（39歳以下で申込）</div>
+      </div>
+      <div class="card-icon">💳</div>
+    </div>
+    <div class="spec-list">
+      <div class="spec-item"><div class="spec-label">基本還元率</div><div class="spec-value">1.0%（通常カードの2倍）</div></div>
+      <div class="spec-item"><div class="spec-label">国際ブランド</div><div class="spec-value">JCB</div></div>
+      <div class="spec-item"><div class="spec-label">ポイント</div><div class="spec-value">Oki Dokiポイント</div></div>
+      <div class="spec-item"><div class="spec-label">特優店</div><div class="spec-value">スタバ5.5倍・Amazon3倍</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros">
+        <div class="pros-title">メリット</div>
+        <ul>
+          <li>年会費無料なのに常時1%の高還元</li>
+          <li>スタバ・Amazon・セブンで大幅アップ</li>
+          <li>39歳申込なら40歳以降も継続利用可</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <div class="cons-title">デメリット</div>
+        <ul>
+          <li>40歳以上は新規申込不可</li>
+          <li>海外でJCBが使えない店舗もある</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 三井住友ゴールド(NL) -->
+  <div class="card-detail">
+    <div class="card-detail-header">
+      <div>
+        <div class="card-name">⭐ 三井住友ゴールドカード(NL)</div>
+        <div class="card-fee">年会費：5,500円 → 年100万円利用で永年無料</div>
+      </div>
+      <div class="card-icon">🏆</div>
+    </div>
+    <div class="spec-list">
+      <div class="spec-item"><div class="spec-label">基本還元率</div><div class="spec-value">0.5%（コンビニ・マクド最大7%）</div></div>
+      <div class="spec-item"><div class="spec-label">ボーナス</div><div class="spec-value">年100万円達成で10,000pt</div></div>
+      <div class="spec-item"><div class="spec-label">ラウンジ</div><div class="spec-value">国内主要空港ラウンジ無料</div></div>
+      <div class="spec-item"><div class="spec-label">保険</div><div class="spec-value">海外・国内旅行傷害保険付帯</div></div>
+    </div>
+    <div class="pros-cons">
+      <div class="pros">
+        <div class="pros-title">メリット</div>
+        <ul>
+          <li>年100万円使えば実質ずっと無料</li>
+          <li>ボーナスPT込みで実質還元率1.5%超</li>
+          <li>空港ラウンジ・保険と特典が充実</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <div class="cons-title">デメリット</div>
+        <ul>
+          <li>初年度は5,500円かかる</li>
+          <li>年100万円達成しないと年会費がかかる</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2>クレジットカードの賢い選び方</h2>
+  <div class="info-box">
+    <div class="box-title">📌 カード選びの3ステップ</div>
+    <p style="margin-bottom:8px"><strong>① 主な利用シーンを決める</strong><br>コンビニ・スーパー中心 → 三井住友NL ／ ネット通販中心 → 楽天・JCBカードW ／ 旅行・出張多い → ゴールド系</p>
+    <p style="margin-bottom:8px"><strong>② 年会費と還元率のバランスを計算する</strong><br>年間利用額 × 還元率 − 年会費 = 実質メリット。年100万円利用なら無料ゴールドが最強。</p>
+    <p style="margin-bottom:0"><strong>③ サブカードを1枚持つ</strong><br>メインを高還元カード、サブをJCBやAMEXなど別ブランドにすると使える場面が広がる。</p>
+  </div>
+
+  <h3>ポイント還元率の落とし穴</h3>
+  <p>「最大〇〇%」という表記は特定の店・条件を満たした場合の数字です。日常的な利用での実質還元率を確認しましょう。楽天カードなら楽天市場以外は1%、三井住友NLならコンビニ以外は0.5%が基本です。</p>
+
+  <div class="aff-section">
+    <h3>💳 おすすめカードに今すぐ申込む</h3>
+    <p>各カードの公式サイトから申込できます。キャンペーン期間中はポイント大量付与も。</p>
+    <a href="https://rpx.a8.net/svt/ejp?a8mat=4B1WM2+EDDPGY+2HOM+6C1VM&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0ea62065.34400275.0ea62066.204f04c0%2Fa26042907724_4B1WM2_EDDPGY_2HOM_6C1VM%3Fpc%3Dhttp%253A%252F%252Fwww.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Fm.rakuten.co.jp%252F" class="aff-btn" target="_blank" rel="nofollow noopener">楽天カードに申込む</a>
+    <a href="https://www.smbc-card.com/nyukai/card/numberless.jsp" class="aff-btn outline" target="_blank" rel="nofollow noopener">三井住友カード(NL)を見る</a>
+    <a href="https://www.jcb.co.jp/ordercard/kojin_card/os_card_w.html" class="aff-btn outline" target="_blank" rel="nofollow noopener">JCBカードWを見る</a>
+  </div>
+
+  <div class="summary-box">
+    <h3>📋 まとめ</h3>
+    <ul class="check-list">
+      <li>楽天経済圏を使うなら<strong>楽天カード</strong>が最強</li>
+      <li>コンビニ・セキュリティ重視なら<strong>三井住友カード(NL)</strong></li>
+      <li>39歳以下なら<strong>JCBカードW</strong>で高還元をキープ</li>
+      <li>年100万円使えるなら<strong>三井住友ゴールド(NL)</strong>が実質無料で最もお得</li>
+      <li>メイン＋サブの2枚持ちで死角をなくすのが上級者の使い方</li>
+    </ul>
+  </div>
+
+  <p style="font-size:12px;color:var(--muted);margin-top:40px">※本記事の情報は2026年4月時点のものです。各カードの還元率・特典は変更になる場合があります。申込前に必ず公式サイトでご確認ください。※当サイトはアフィリエイト広告を利用しています。</p>
+</div>
+
+<footer>
+  <p style="margin-bottom:8px">© 2026 マネとく｜法律・税金・お金の情報メディア</p>
+  <p><a href="../index.html">トップへ</a>｜<a href="#">プライバシーポリシー</a>｜<a href="#">免責事項</a></p>
+</footer>
+</body>
+</html>
