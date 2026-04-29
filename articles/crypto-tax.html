@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>仮想通貨の確定申告【2026年版】いくらから必要？計算方法まとめ | マネとく</title>
+<meta name="description" content="仮想通貨の利益にかかる税金・確定申告の方法をわかりやすく解説。いくらから申告が必要か、計算方法と節税ポイントも紹介。">
+<meta property="og:title" content="仮想通貨の確定申告【2026年版】いくらから必要？計算方法まとめ | マネとく">
+<meta property="og:description" content="仮想通貨の利益にかかる税金・確定申告の方法をわかりやすく解説。いくらから申告が必要か、計算方法と節税ポイントも紹介。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ng273ufff-design.github.io/maneyhow/articles/crypto-tax.html">
+<meta property="og:site_name" content="マネとく">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@manetoku_jp">
+<style>
+  :root{--bg:#f0f4f8;--bg2:#ffffff;--accent:#16a34a;--navy:#0f2d5e;--text:#0f172a;--muted:#64748b;--border:#e2e8f0;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--bg);color:var(--text);font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;line-height:1.8;}
+  a{color:var(--accent);}
+  header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 1px 8px rgba(15,45,94,0.06);padding:0 24px;}
+  .header-inner{max-width:900px;margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;}
+  .logo{font-size:20px;font-weight:900;color:var(--navy);text-decoration:none;}.logo span{color:var(--accent);}
+  .back{color:var(--muted);font-size:13px;text-decoration:none;}.back:hover{color:var(--navy);}
+  .article-wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
+  .article-meta{display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+  .tag{font-size:11px;font-weight:700;padding:3px 12px;border-radius:10px;}
+  .tag-crypto{background:#fef3c7;color:#d97706;}
+  .date,.read-time{font-size:12px;color:var(--muted);}
+  h1{font-size:clamp(22px,4vw,32px);font-weight:900;line-height:1.4;margin-bottom:24px;color:var(--navy);}
+  .lead{background:#fff;border-left:4px solid var(--accent);border-radius:0 12px 12px 0;padding:20px 24px;font-size:15px;line-height:1.8;margin-bottom:40px;color:#374151;box-shadow:0 2px 8px rgba(15,45,94,0.08);}
+  h2{font-size:20px;font-weight:900;margin:40px 0 16px;padding-left:16px;border-left:4px solid var(--accent);color:var(--navy);}
+  h3{font-size:16px;font-weight:800;margin:28px 0 12px;color:#2563eb;}
+  p{margin-bottom:16px;font-size:15px;color:#374151;}
+  .info-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;margin:24px 0;}
+  .info-box .box-title{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:12px;}
+  .check-list{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .check-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#374151;}
+  .check-list li::before{content:'✓';color:var(--accent);font-weight:900;flex-shrink:0;margin-top:2px;}
+  .compare-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:14px;}
+  .compare-table th{background:var(--navy);color:#fff;padding:10px 16px;text-align:left;font-weight:700;}
+  .compare-table td{padding:12px 16px;border-bottom:1px solid var(--border);color:#374151;background:#fff;}
+  .compare-table tr:last-child td{border-bottom:none;}
+  .warning-box{background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:20px 24px;margin:24px 0;}
+  .warning-box .box-title{font-size:13px;font-weight:800;color:#dc2626;margin-bottom:8px;}
+  .good-box{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:20px 24px;margin:24px 0;}
+  .good-box .box-title{font-size:13px;font-weight:800;color:#15803d;margin-bottom:8px;}
+  .step-list{list-style:none;display:flex;flex-direction:column;gap:16px;counter-reset:step;}
+  .step-list li{display:flex;gap:16px;align-items:flex-start;font-size:14px;color:#374151;counter-increment:step;}
+  .step-list li::before{content:counter(step);background:var(--accent);color:#fff;font-weight:900;font-size:13px;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .aff-section{background:linear-gradient(135deg,#0f2d5e,#1e4d8c);border-radius:16px;padding:32px;margin:48px 0;text-align:center;}
+  .aff-section h3{font-size:18px;margin-bottom:8px;color:#fff!important;}
+  .aff-section p{font-size:13px;color:rgba(255,255,255,0.75)!important;margin-bottom:20px;}
+  .aff-btn{display:inline-block;background:#16a34a;color:#fff;font-size:14px;font-weight:800;padding:12px 28px;border-radius:30px;text-decoration:none;margin:4px;}
+  .aff-btn.outline{background:transparent;border:1.5px solid rgba(255,255,255,0.5);color:#fff;}
+  .summary-box{background:linear-gradient(135deg,rgba(22,163,74,0.08),rgba(22,163,74,0.03));border:1px solid rgba(22,163,74,0.25);border-radius:16px;padding:28px;margin:40px 0;}
+  .summary-box h3{font-size:16px;font-weight:900;color:var(--accent);margin-bottom:16px;}
+  footer{background:var(--navy);padding:32px 24px;text-align:center;color:rgba(255,255,255,0.6);font-size:12px;}
+  footer a{color:#6ee7b7;text-decoration:none;}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="logo">マネ<span>とく</span></a>
+    <a href="../index.html" class="back">← 記事一覧</a>
+  </div>
+</header>
+<div class="article-wrap">
+  <div class="article-meta">
+    <span class="tag tag-crypto">仮想通貨・税金</span>
+    <span class="date">2026年4月29日</span>
+    <span class="read-time">📖 約6分</span>
+  </div>
+  <h1>仮想通貨の確定申告【2026年版】いくらから必要？計算方法まとめ</h1>
+  <div class="lead">
+    仮想通貨で利益が出たら<strong>確定申告が必要</strong>です。「バレないからいい」は通用しません。いくらから申告が必要か・税率・計算方法・節税ポイントをわかりやすく解説します。
+  </div>
+
+  <h2>いくらから確定申告が必要？</h2>
+  <p>仮想通貨の利益は<strong>雑所得</strong>として扱われます。他の所得（給与・フリーランス収入など）と合算して計算します。</p>
+  <table class="compare-table">
+    <tr><th>対象者</th><th>申告が必要になる利益額</th></tr>
+    <tr><td>会社員（給与所得あり）</td><td><strong>年間利益20万円超</strong></td></tr>
+    <tr><td>専業主婦・学生（扶養内）</td><td><strong>年間利益48万円超</strong>（基礎控除内）</td></tr>
+    <tr><td>個人事業主・フリーランス</td><td><strong>利益1円以上</strong>（他の所得と合算）</td></tr>
+  </table>
+  <p>「20万円以下なら申告不要」というのは<strong>所得税</strong>の話です。住民税は1円以上の利益があれば申告が必要な場合があります。</p>
+
+  <h2>税率はいくら？</h2>
+  <p>仮想通貨の利益は給与などと合算した<strong>総合課税</strong>で、最大55%（所得税45%＋住民税10%）まで上がります。株式投資の一律20%と大きく違う点です。</p>
+  <table class="compare-table">
+    <tr><th>課税所得（合計）</th><th>所得税率</th><th>住民税込み</th></tr>
+    <tr><td>195万円以下</td><td>5%</td><td>15%</td></tr>
+    <tr><td>330万円以下</td><td>10%</td><td>20%</td></tr>
+    <tr><td>695万円以下</td><td>20%</td><td>30%</td></tr>
+    <tr><td>900万円以下</td><td>23%</td><td>33%</td></tr>
+    <tr><td>1,800万円以下</td><td>33%</td><td>43%</td></tr>
+    <tr><td>4,000万円以下</td><td>40%</td><td>50%</td></tr>
+    <tr><td>4,000万円超</td><td>45%</td><td><strong>55%</strong></td></tr>
+  </table>
+
+  <h2>利益の計算方法</h2>
+  <p>仮想通貨の利益は「売却金額 − 取得費用」で計算します。取得費は<strong>総平均法</strong>が原則です。</p>
+  <div class="info-box">
+    <div class="box-title">📊 計算例</div>
+    <p style="font-size:14px;margin-bottom:8px;">1月：BTCを30万円で購入<br>6月：BTCを50万円で売却</p>
+    <p style="font-size:15px;font-weight:800;color:var(--navy);">利益 ＝ 50万円 − 30万円 ＝ <span style="color:#16a34a">20万円</span></p>
+    <p style="font-size:12px;color:var(--muted);margin-top:8px;">※手数料・送金コストも取得費に含められます</p>
+  </div>
+
+  <h3>課税タイミングに注意</h3>
+  <ul class="check-list" style="margin-bottom:16px;">
+    <li>円に換金したとき</li>
+    <li>仮想通貨で買い物をしたとき</li>
+    <li>別の仮想通貨に交換したとき（BTC→ETHなど）</li>
+    <li>マイニング報酬を受け取ったとき</li>
+  </ul>
+
+  <div class="warning-box">
+    <div class="box-title">⚠️ 無申告はバレる</div>
+    <p style="font-size:14px;color:#374151;margin:0;">取引所は税務署にデータを提供しています。無申告・過少申告が発覚すると、本来の税額に加えて無申告加算税（15〜20%）や延滞税が課されます。</p>
+  </div>
+
+  <h2>節税できる3つのポイント</h2>
+  <div class="good-box">
+    <div class="box-title">✅ 節税ポイント</div>
+    <ul class="check-list">
+      <li><strong>損益通算：</strong>同じ年に損失が出た銘柄と相殺できる</li>
+      <li><strong>経費計上：</strong>取引手数料・セミナー費用・書籍代などを経費に</li>
+      <li><strong>法人化：</strong>利益が大きくなれば法人税率（約23%）の方が有利</li>
+    </ul>
+  </div>
+
+  <h2>確定申告の手順</h2>
+  <ol class="step-list" style="margin-bottom:24px;">
+    <li><strong>取引履歴を取引所からダウンロード</strong>（年間取引報告書）</li>
+    <li><strong>損益を計算</strong>（国税庁の計算ツールまたは専用ソフトを利用）</li>
+    <li><strong>確定申告書に記入</strong>（e-Taxで2〜3月15日までに提出）</li>
+  </ol>
+
+  <div class="aff-section">
+    <h3>🪙 記録が楽になる取引所を使おう</h3>
+    <p>年間取引報告書の出力・税務サポートが充実した取引所がおすすめです。</p>
+    <a href="#" class="aff-btn" target="_blank" rel="nofollow noopener">Coincheckで口座開設（無料）</a>
+    <a href="#" class="aff-btn outline" target="_blank" rel="nofollow noopener">GMOコインを見る</a>
+  </div>
+
+  <div class="summary-box">
+    <h3>📋 まとめ</h3>
+    <ul class="check-list">
+      <li>会社員は年間利益20万円超で確定申告が必要</li>
+      <li>税率は最大55%（総合課税）</li>
+      <li>コイン同士の交換も課税対象</li>
+      <li>損失は同年の利益と通算できる</li>
+      <li>取引履歴は毎年ダウンロードして保管しておこう</li>
+    </ul>
+  </div>
+  <p style="font-size:12px;color:var(--muted);margin-top:40px">※本記事の情報は2026年4月時点のものです。税制は改正される場合があります。個別の判断は税理士にご相談ください。</p>
+</div>
+<footer>
+  <p>© 2026 マネとく | <a href="../index.html">トップへ</a> | <a href="#">プライバシーポリシー</a> | <a href="#">免責事項</a></p>
+</footer>
+</body>
+</html>
