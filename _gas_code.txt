@@ -1,0 +1,124 @@
+// ================================================================
+// マネとく - Visitor Tracker Backend
+// PropertiesServiceに訪問データを蓄積
+// doPost: 訪問ログ受信  /  doGet: ダッシュボード用JSON返却
+// ================================================================
+
+const PROP_PV       = 'pv';      // [[ISO_datetime, slug, referrer_host, screen, country?], ...]
+const PROP_DAILY    = 'daily';   // {YYYY-MM-DD: {total:N, articles:{slug:N}, sources:{host:N}}}
+const PROP_TOTALS   = 'totals';  // {pv:N, uniqueDays:N, lastUpdate:ISO}
+const MAX_LOGS      = 500;       // 直近500件まで詳細保持
+
+// CORS / JSONP は GitHub Pages → script.googleusercontent.com で必要
+function _jsonResp(obj) {
+  return ContentService
+    .createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+
+// ================================================================
+// POST: 訪問ログ受信
+// body: { slug, referrer, screen, ts }
+// ================================================================
+function doPost(e) {
+  try {
+    const data = JSON.parse(e.postData.contents);
+    const slug = String(data.slug || '').substring(0, 60);
+    if (!slug) return _jsonResp({ ok: false, err: 'no slug' });
+
+    const refHost = (() => {
+      try {
+        const u = new URL(data.referrer || '');
+        return u.hostname || 'direct';
+      } catch (_) { return 'direct'; }
+    })();
+    const screen = String(data.screen || '').substring(0, 20);
+    const ts = new Date();
+    const tsStr = Utilities.formatDate(ts, 'Asia/Tokyo', 'yyyy-MM-dd HH:mm:ss');
+    const dateStr = Utilities.formatDate(ts, 'Asia/Tokyo', 'yyyy-MM-dd');
+
+    const props = PropertiesService.getScriptProperties();
+
+    // 1) 詳細ログ
+    const logs = JSON.parse(props.getProperty(PROP_PV) || '[]');
+    logs.push([tsStr, slug, refHost, screen]);
+    if (logs.length > MAX_LOGS) logs.splice(0, logs.length - MAX_LOGS);
+    props.setProperty(PROP_PV, JSON.stringify(logs));
+
+    // 2) 日次集計
+    const daily = JSON.parse(props.getProperty(PROP_DAILY) || '{}');
+    if (!daily[dateStr]) daily[dateStr] = { total: 0, articles: {}, sources: {} };
+    daily[dateStr].total++;
+    daily[dateStr].articles[slug] = (daily[dateStr].articles[slug] || 0) + 1;
+    daily[dateStr].sources[refHost] = (daily[dateStr].sources[refHost] || 0) + 1;
+    // 古い日付（60日以前）は削除
+    const cutoff = new Date(ts.getTime() - 60 * 86400000);
+    const cutoffStr = Utilities.formatDate(cutoff, 'Asia/Tokyo', 'yyyy-MM-dd');
+    Object.keys(daily).forEach(k => { if (k < cutoffStr) delete daily[k]; });
+    props.setProperty(PROP_DAILY, JSON.stringify(daily));
+
+    // 3) 累計
+    const totals = JSON.parse(props.getProperty(PROP_TOTALS) || '{}');
+    totals.pv = (totals.pv || 0) + 1;
+    totals.uniqueDays = Object.keys(daily).length;
+    totals.lastUpdate = tsStr;
+    props.setProperty(PROP_TOTALS, JSON.stringify(totals));
+
+    return _jsonResp({ ok: true });
+  } catch (err) {
+    return _jsonResp({ ok: false, err: String(err) });
+  }
+}
+
+// ================================================================
+// GET: ダッシュボード用集計返却
+// ?action=summary  → 全体サマリ + 日次トレンド + 記事別TOP + 流入元TOP
+// ?action=recent   → 直近100件の生ログ
+// ================================================================
+function doGet(e) {
+  const action = (e && e.parameter && e.parameter.action) || 'summary';
+  const props = PropertiesService.getScriptProperties();
+
+  if (action === 'recent') {
+    const logs = JSON.parse(props.getProperty(PROP_PV) || '[]');
+    return _jsonResp({ ok: true, logs: logs.slice(-100).reverse() });
+  }
+
+  // summary
+  const daily = JSON.parse(props.getProperty(PROP_DAILY) || '{}');
+  const totals = JSON.parse(props.getProperty(PROP_TOTALS) || '{}');
+
+  // 直近30日トレンド
+  const sortedDates = Object.keys(daily).sort();
+  const last30 = sortedDates.slice(-30).map(d => ({ date: d, count: daily[d].total }));
+
+  // 全期間 記事別集計
+  const articleTotals = {};
+  const sourceTotals = {};
+  Object.values(daily).forEach(d => {
+    Object.entries(d.articles).forEach(([k, v]) => articleTotals[k] = (articleTotals[k] || 0) + v);
+    Object.entries(d.sources).forEach(([k, v]) => sourceTotals[k] = (sourceTotals[k] || 0) + v);
+  });
+  const topArticles = Object.entries(articleTotals).sort((a, b) => b[1] - a[1]).slice(0, 16);
+  const topSources = Object.entries(sourceTotals).sort((a, b) => b[1] - a[1]).slice(0, 10);
+
+  // 今日のPV
+  const today = Utilities.formatDate(new Date(), 'Asia/Tokyo', 'yyyy-MM-dd');
+  const todayPV = (daily[today] && daily[today].total) || 0;
+
+  return _jsonResp({
+    ok: true,
+    totals: { pv: totals.pv || 0, days: totals.uniqueDays || 0, today: todayPV, lastUpdate: totals.lastUpdate || '' },
+    trend30: last30,
+    topArticles,
+    topSources,
+  });
+}
+
+// ================================================================
+// 開発用: 手動リセット（GAS editor から実行）
+// ================================================================
+function resetAll() {
+  const props = PropertiesService.getScriptProperties();
+  [PROP_PV, PROP_DAILY, PROP_TOTALS].forEach(k => props.deleteProperty(k));
+}
