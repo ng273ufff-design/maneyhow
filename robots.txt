@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /dashboard.html
+Disallow: /_gas_code.txt
 
 Sitemap: https://ng273ufff-design.github.io/maneyhow/sitemap.xml

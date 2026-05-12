@@ -13,7 +13,23 @@
   // ============================================================
   const GA4_ID = 'G-0NQHWCG4YM';    // マネとくブログ (2026-05-12)
   const CLARITY_ID = 'wpude6ryte';  // マネとく Clarity (2026-05-12)
+  const GAS_TRACKER = 'https://script.google.com/macros/s/AKfycbyorFa9tcyASPuCwjerEzS8y3h7TffnMnudOLByKtRLiUSFDi36WS9hZvO82plxklaB/exec';
   // ============================================================
+
+  // ---------- 独自ビジターカウンター（GAS Web App + Sheets） ----------
+  if (GAS_TRACKER) {
+    try {
+      const slug = (location.pathname.split('/').pop() || 'index').replace('.html', '');
+      const body = JSON.stringify({
+        slug: slug,
+        referrer: document.referrer || '',
+        screen: window.innerWidth + 'x' + window.innerHeight,
+      });
+      // text/plain で CORS preflight 回避
+      fetch(GAS_TRACKER, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: body, keepalive: true })
+        .catch(function () { /* silent */ });
+    } catch (_) { /* silent */ }
+  }
 
   // ---------- GA4 ----------
   if (GA4_ID && GA4_ID.startsWith('G-')) {
